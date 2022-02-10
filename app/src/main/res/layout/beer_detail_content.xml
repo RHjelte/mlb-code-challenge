@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="beerDetails"
+            type="com.rubyh.mlbcodechallenge.model.BeerDetails" />
+    </data>
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/beer_name"
+            style="@style/BeerDetails.LabelName"
+            android:text="@{beerDetails.name}"
+            tools:text="Beer Sample 1" />
+
+        <TextView
+            android:id="@+id/tag_line"
+            style="@style/BeerDetails.LabelCaption"
+            android:text="@{beerDetails.tagline}"
+            tools:text="Tag line goes here" />
+
+        <TextView
+            android:id="@+id/first_brewed"
+            style="@style/BeerDetails.LabelBody1Center"
+            android:text="@{@string/beer_detail_first_brewed(beerDetails.firstBrewed)}"
+            tools:text="First brewed" />
+
+        <TextView
+            android:id="@+id/description"
+            style="@style/BeerDetails.LabelBody"
+            android:text="@{@string/beer_detail_description(beerDetails.description)}"
+            tools:text="Description" />
+
+        <TextView
+            android:id="@+id/abv"
+            style="@style/BeerDetails.LabelBody"
+            android:text="@{@string/beer_detail_abv(beerDetails.abv)}"
+            tools:text="abv" />
+
+        <TextView
+            android:id="@+id/ibu"
+            style="@style/BeerDetails.LabelBody"
+            android:text="@{@string/beer_detail_ibu(beerDetails.ibu)}"
+            tools:text="ibu" />
+
+        <TextView
+            android:id="@+id/target_fg"
+            style="@style/BeerDetails.LabelBody"
+            android:text="@{@string/beer_detail_target_fg(beerDetails.targetFg)}"
+            tools:text="Target Fg" />
+
+        <TextView
+            android:id="@+id/target_og"
+            style="@style/BeerDetails.LabelBody"
+            android:text="@{@string/beer_detail_target_og(beerDetails.targetOg)}"
+            tools:text="Target Og" />
+
+        <TextView
+            android:id="@+id/ebc"
+            style="@style/BeerDetails.LabelBody"
+            android:text="@{@string/beer_detail_ebc(beerDetails.ebc)}"
+            tools:text="ebc" />
+
+        <TextView
+            android:id="@+id/srm"
+            style="@style/BeerDetails.LabelBody"
+            android:text="@{@string/beer_detail_srm(beerDetails.srm)}"
+            tools:text="srm" />
+
+        <TextView
+            android:id="@+id/ph"
+            style="@style/BeerDetails.LabelBody"
+            android:text="@{@string/beer_detail_ph(beerDetails.ph)}"
+            tools:text="pH" />
+
+        <TextView
+            android:id="@+id/attenuation_level"
+            style="@style/BeerDetails.LabelBody"
+            android:text="@{@string/beer_detail_attenuation_level(beerDetails.attenuationLevel)}"
+            tools:text="Attenuation level" />
+
+        <TextView
+            android:id="@+id/volume"
+            style="@style/BeerDetails.LabelBody"
+            android:text="@{@string/beer_detail_volume(beerDetails.volume)}"
+            tools:text="volume" />
+
+        <TextView
+            android:id="@+id/boil_volume"
+            style="@style/BeerDetails.LabelBody"
+            android:text="@{@string/beer_detail_boil_volume(beerDetails.boilVolume)}"
+            tools:text="Boil Volume" />
+
+        <TextView
+            android:id="@+id/method"
+            style="@style/BeerDetails.LabelBody"
+            android:text="@{@string/beer_detail_method(beerDetails.method)}"
+            tools:text="Method" />
+
+        <TextView
+            android:id="@+id/ingredients"
+            style="@style/BeerDetails.LabelBody"
+            android:text="@{@string/beer_detail_ingredients(beerDetails.ingredients)}"
+            tools:text="Ingredients" />
+
+        <TextView
+            android:id="@+id/food_pairing"
+            style="@style/BeerDetails.LabelBody"
+            android:text='@{@string/beer_detail_food_pairing(TextUtils.join("\n\t", beerDetails.foodPairing))}'
+            tools:text="Food pairing" />
+
+        <TextView
+            android:id="@+id/brewers_tips"
+            style="@style/BeerDetails.LabelBody"
+            android:text="@{@string/beer_detail_brewers_tips(beerDetails.brewersTips)}"
+            tools:text="Brewer's tips" />
+
+        <TextView
+            android:id="@+id/contributed_by"
+            style="@style/BeerDetails.LabelBody"
+            android:text="@{@string/beer_detail_contributed_by(beerDetails.contributedBy)}"
+            tools:text="Contributed by" />
+
+
+    </LinearLayout>
+</layout>

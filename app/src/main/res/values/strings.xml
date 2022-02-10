@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">MLB Code Challenge</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_beer_detail_host">BeerDetailHostActivity</string>
+    <string name="title_beer_list">Beers</string>
+    <string name="title_beer_detail">Beer Detail</string>
+    <string name="beer_image_goes_here">beer image goes here</string>
+
+    <string name="beer_detail_first_brewed">First brewed: %1$s</string>
+    <string name="beer_detail_description">Description: %1$s</string>
+    <string name="beer_detail_abv">abv = %1$.2f</string>
+    <string name="beer_detail_ibu">ibu = %1$.2f</string>
+    <string name="beer_detail_target_fg">Target Fg = %1$.2f</string>
+    <string name="beer_detail_target_og">Target Og = %1$.2f</string>
+    <string name="beer_detail_ebc">ebc = %1$.2f</string>
+    <string name="beer_detail_srm">srm = %1$.2f</string>
+    <string name="beer_detail_ph">pH = %1$.2f</string>
+    <string name="beer_detail_attenuation_level">Attenuation level = %1$a.2f</string>
+    <string name="beer_detail_volume">Volume = %1$s</string>
+    <string name="beer_detail_boil_volume">Boil volume = %1$s</string>
+    <string name="beer_detail_method">Method = %1$s</string>
+    <string name="beer_detail_ingredients">%1$s</string>
+    <string name="beer_detail_food_pairing">Food pairing\n\t%1$s</string>
+    <string name="beer_detail_brewers_tips">Brewer\'s tips: %1$s</string>
+    <string name="beer_detail_contributed_by">Contributed by %1$s</string>
+    <string name="details_about_beer">Details about beer</string>
+    <string name="search_instruction">List of beers can be updated by entering a comma separated list of query parameters in the search view. Query parameters can be found at https://punkapi.com/documentation/v2.</string>
+    <string name="beer_list_nav_label">Beer List</string>
+    <string name="beer_detail_nav_label">Details</string>
+    <string name="reload">Reload all</string>
+</resources>

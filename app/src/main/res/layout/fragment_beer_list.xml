@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Adding the same root's ID for view binding as other layout configurations -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.rubyh.mlbcodechallenge.ui.BeerViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/beer_list_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/container_horizontal_margin"
+        android:layout_marginEnd="@dimen/container_horizontal_margin">
+
+        <Button
+            android:id="@+id/reload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/beer_detail_body_top_margin"
+            android:onClick="@{() -> viewModel.reload() }"
+            android:text="@string/reload"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/search_instruction"
+            style="@style/BeerDetails.LabelBody"
+            android:text="@string/search_instruction"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/reload" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/beer_list"
+            android:name="com.rubyh.mlbcodechallenge.ui.BeerListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/search_instruction"
+            tools:context="com.rubyh.mlbcodechallenge.ui.BeerDetailHostActivity"
+            tools:listitem="@layout/beer_list_content" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/wait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_instruction" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

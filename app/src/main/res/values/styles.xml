@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BeerDetails.CardTextViewBase" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/text_margin</item>
+        <item name="android:layout_marginTop">@dimen/beer_detail_body_top_margin</item>
+        <item name="android:textAlignment">textStart</item>
+    </style>
+
+    <style name="BeerDetails.CardTitle" parent="BeerDetails.CardTextViewBase">
+        <item name="android:textAppearance">?attr/textAppearanceSubtitle2</item>
+    </style>
+
+    <style name="BeerDetails.CardCaption" parent="BeerDetails.CardTextViewBase">
+        <item name="android:textAppearance">?attr/textAppearanceCaption</item>
+    </style>
+
+
+    <style name="BeerDetails.LabelBase" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/text_margin</item>
+        <item name="android:layout_marginTop">@dimen/beer_detail_body_top_margin</item>
+    </style>
+
+    <style name="BeerDetails.LabelName" parent="BeerDetails.LabelBase">
+        <item name="android:textAppearance">?attr/textAppearanceSubtitle2</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="BeerDetails.LabelCaption" parent="BeerDetails.LabelBase">
+        <item name="android:textAppearance">?attr/textAppearanceCaption</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="BeerDetails.LabelBody1Center" parent="BeerDetails.LabelBase">
+        <item name="android:textAppearance">?attr/textAppearanceBody1</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="BeerDetails.LabelBody" parent="BeerDetails.LabelBase">
+        <item name="android:textAppearance">?attr/textAppearanceBody2</item>
+        <item name="android:textAlignment">textStart</item>
+    </style>
+</resources>

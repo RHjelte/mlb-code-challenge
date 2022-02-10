@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="beerDetails"
+            type="com.rubyh.mlbcodechallenge.model.BeerDetails" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_margin"
+        android:onClick="@{clickListener}"
+        app:cardElevation="@dimen/card_elevation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/beer_image"
+                android:layout_width="@dimen/card_image_width"
+                android:layout_height="@dimen/card_image_height"
+                android:layout_margin="@dimen/card_image_top_margin"
+                android:contentDescription="@string/beer_image_goes_here"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:urlForImage="@{beerDetails.imageUrl}"
+                tools:background="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/beer_name"
+                style="@style/BeerDetails.CardTitle"
+                android:text="@{beerDetails.name}"
+                app:layout_constraintStart_toEndOf="@id/beer_image"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Beer Sample 1" />
+
+            <TextView
+                android:id="@+id/tag_line"
+                style="@style/BeerDetails.CardCaption"
+                android:text="@{beerDetails.tagline}"
+                app:layout_constraintStart_toEndOf="@id/beer_image"
+                app:layout_constraintTop_toBottomOf="@id/beer_name"
+                tools:text="Tag line goes here" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
